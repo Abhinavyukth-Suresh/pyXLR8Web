@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title></title>
+
+        <script>
+        </script>
+
+        <style>
+            #top_bar{
+                padding: 5px;
+                background-position-x: center;
+                width:80%;
+                position: absolute;
+                left:10%;
+            }
+
+            #topbar_elem{
+                float:left;
+                background-color: 	#000000;
+                color:#FFFFFF;
+                padding: 10px;
+                width:15%;
+                border-radius: 10px;
+            }
+
+            #topbar_elem:hover{
+                background-color: #202020;
+            }
+
+            #nav_break{
+                position: absolute;
+                left:9%;
+                width:72%;
+                top:50px;
+            }
+
+            #cont{
+                top: 100px;
+                left:5px;
+                padding: 5px;
+                position: absolute;
+                width:100%;
+                height: auto;
+            }
+
+            #sidebar{
+                /*border-left: solid 2px #FFFFFF ;*/
+                border-right: solid 2px #FFFFFF ;
+                padding: 15px;
+                width:20%;
+                height: 100%;
+                float: left;
+                position: relative;
+                top: 50%;
+                left: 10px;
+                
+            }
+
+            #side_card{
+                height: auto;
+                background-color: #000000;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 30px;
+                padding-right: 30px;
+                color:#FFFFFF;
+            }
+
+            #side_card:hover{
+                background-color: #202020;
+                color:#FFFFFF;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                border-radius: 10px;;
+            }
+
+            #main_cont{
+                position: relative;
+                float:left;
+                width:65%;
+                height:auto;
+                padding-left: 50px;
+                padding-top: 0px;
+                
+            }
+
+            #title{
+                position: relative;
+                float:left;
+                width:65%;
+                height:auto;
+                padding-left: 50px;
+                padding-top: 0px;
+                
+            }
+
+            #blank{
+                position: inherit;
+                width:100%;
+                background-color: black;
+            }
+
+            h1{
+                font-family: 'Cambria-Math';
+                color: white;
+                font-weight: normal;
+                font-size: 50px;
+            }
+
+            h2{
+                font-family: 'Lucida Console';
+                color: green;
+                font-weight: normal;
+                font-size: 20px;
+            }
+
+            p{
+                font-family: 'Cambria-Math';
+                color: white;
+                font-weight: normal;
+                font-size: 15px;
+                /*text-indent: 10px;*/
+            }
+
+            
+
+            
+        </style>
+    </head>
+
+    <body bgcolor="black">
+        <div id="top_bar">
+            <div  id="topbar_elem">
+                Home
+            </div>
+            <div id="topbar_elem">
+                People
+            </div>
+            <div id="topbar_elem">
+                About
+            </div>
+            <div id="topbar_elem">
+                Info
+            </div>
+        </div>
+        <br>
+        <div id="nav_break">
+            <hr>
+        </div>
+
+        <div>
+        </div>
+
+        <div id="cont">
+            <div id="sidebar">
+                <div id="side_card"> Intro </div>
+                <div id="side_card"> Installation </div>
+                <div id="side_card"> Compilation </div>
+            </div>
+            <div id="title">
+                <h1>pyXLR8</h1>
+            </div>
+            <div id="main_cont">
+                
+                <div id="blank">
+                    <h2>|user\pyXLR8> Intro</h2>
+                    <p>Accelerating performace of Python functions via complation raw python code using GNU compiler collection(GCC), facilitating code optimization through code transformation and compiler optimizations resulting in substantial performace improvements, perticularly for iterative numerical functions.</p>
+                    <video src="trial.mp4" autoplay loop muted type="video/mp4" width="60%" height="60%" ></video> 
+                </div>
+                <div id="blank">
+                    <h2>|user\pyXLR8> Installation</h2>
+                    <p style="font-size: 19px;font-family:'Segoe UI';">Build from Source Code</p>
+                    <video src="installation.mp4" autoplay loop muted type="video/mp4" width="100%" height="100%" ></video>
+                    <p>git clone https://github.com/Abhinavyukth-Suresh/PyXlR8.git <br>
+                    python3 setup.py</p>
+                </div>
+                <div id="blank">
+                    <h2>|user\pyXLR8> Complation</h2>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
