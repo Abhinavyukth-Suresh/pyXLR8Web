@@ -3,6 +3,54 @@
         <title></title>
 
         <script>
+            var default_clr = "rgba(0,0,0,1)";
+            var active_clr = "rgba(130,140,130,0.6)";
+            window.onload = function() {
+                var siden =  document.getElementById('sidebar').children
+                default_clr = siden[0].style.background
+                siden[0].style.background = active_clr;
+                var ndc = document.getElementById('sidebar').children
+                for(let i=0;i<ndc.length;i++){
+                    ndc[i].addEventListener('click',setmain.bind('null',i))
+                }
+                setInterval(check_title,100);
+            }
+
+            function setmain(i){
+                var main = document.getElementById('main_cont');
+                var nodes = main.children;
+                var y = nodes[i].offsetTop;
+                main.scrollTop = y;
+                //main.scrollTo(y);
+            }
+            function check_title(){
+                var main = document.getElementById('main_cont');
+                var nodes = main.children;
+                var siden =  document.getElementById('sidebar').children
+                var i = 1; 
+                var Y = main.scrollTop;
+                var y1,y2;
+                var curr = 0;
+                
+                for(let j=0;j<nodes.length;j++){
+                    siden[j].style.background = default_clr;
+                }
+
+                least_ind = 0;
+                least_val = Math.abs(nodes[0].offsetTop-Y)
+                var dy;
+                //console.log(i,nodes.length);
+                for(i=1;i<nodes.length;i++){
+                    dy = Math.abs(nodes[i].offsetTop-Y)
+                    if(least_val>dy){
+                        least_val = dy;
+                        least_ind = i;
+                    }
+                }
+                siden[least_ind].style.background = active_clr;
+            }
+
+            
         </script>
 
         <style>
@@ -79,12 +127,15 @@
             #main_cont{
                 position: relative;
                 float:left;
-                width:65%;
-                height:auto;
+                width:67%;
+                /*height:auto;*/
+                height:65vh;
                 padding-left: 50px;
                 padding-top: 0px;
-                
+                overflow-y: scroll;
             }
+
+            
 
             #title{
                 position: relative;
@@ -124,9 +175,22 @@
                 /*text-indent: 10px;*/
             }
 
-            
+            ::-webkit-scrollbar {
+                height: 12px;
+                width: 3px;
+                background: #000;
+            }
 
-            
+            ::-webkit-scrollbar-thumb {
+                background: white;
+                -webkit-border-radius: 1ex;
+                -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+            }
+
+            ::-webkit-scrollbar-corner {
+                background: #000;
+            }
+
         </style>
     </head>
 
@@ -158,6 +222,9 @@
                 <div id="side_card"> Intro </div>
                 <div id="side_card"> Installation </div>
                 <div id="side_card"> Compilation </div>
+                <br><br><br><br>
+                <video src="show.mp4" autoplay loop muted type="video/mp4" width=250vh  ></video>
+
             </div>
             <div id="title">
                 <h1>pyXLR8</h1>
@@ -177,7 +244,7 @@
                     python3 setup.py</p>
                 </div>
                 <div id="blank">
-                    <h2>|user\pyXLR8> Complation</h2>
+                    <h2>|user\pyXLR8> Compilation</h2>
                 </div>
             </div>
             
